@@ -1,0 +1,26 @@
+{
+  "name": "astro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "start": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "astro": "^4.16.13"
+  },
+  "dependencies": {
+    "@astrojs/react": "^3.6.2",
+    "@nanostores/react": "^0.8.2",
+    "bootstrap": "^5.3.3",
+    "nanostores": "^0.11.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  }
+}
