@@ -1,0 +1,141 @@
+.custom-dropdown {
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-input-box {
+  width: 100%;
+  height: 38px;
+  box-sizing: border-box;
+  outline: 0.3mm solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.375rem;
+  padding: 8px 15px;
+  font-family: poppins;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  background-color: white;
+}
+
+.dropdown-input-box::before {
+  content: "expand_more";
+  font-family: "Material Icons";
+  position: absolute;
+  font-size: 18px;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+  width: fit-content;
+  height: fit-content;
+}
+
+.dropdown-input-box.open::before {
+  content: "expand_less";
+}
+
+.dropdown-input-box:empty::after {
+  content: "Select User";
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  background: white;
+  margin-top: 10px;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  max-height: 0;
+  transition: 0.25s ease-out;
+  z-index: 1000;
+}
+
+.dropdown-list.open {
+  max-height: 300px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15), 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.dropdown-search-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 8px;
+}
+
+.dropdown-search {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 0.375rem;
+  border: none;
+  outline: 0.3mm solid rgba(0, 0, 0, 0.15);
+  font-family: poppins;
+}
+
+.dropdown-search:focus {
+  outline: 0.5mm solid rgba(0, 0, 0, 0.35);
+}
+
+.dropdown-option {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: poppins;
+  font-size: 14px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown-option:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-option.selected {
+  color: rgb(20, 117, 213);
+  background: rgb(238, 245, 252);
+}
+
+.dropdown-option.selected::before {
+  content: "done";
+  font-family: "Material Icons";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+  font-size: 18px;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .nav-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .custom-dropdown {
+    width: 100%;
+  }
+}

@@ -1,0 +1,41 @@
+body {
+    overflow-x: hidden;
+}
+
+.loader {
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 12px solid black;
+    border-right: 12px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: relative;
+}
+
+.loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    border-bottom: 12px solid green;
+    border-left: 12px solid transparent;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nav-link.active {
+    color: white !important;
+}
